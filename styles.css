@@ -49,6 +49,16 @@ a:active {
     filter: brightness(70%);
 }
 
+button:hover {
+    background-color: unset;
+    filter: brightness(85%);
+}
+
+button:active {
+    background-color: unset;
+    filter: brightness(70%);
+}
+
 body {
     min-height: 100vh;
     display: grid;
@@ -131,7 +141,7 @@ body {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 2fr;
-    padding: 16px 0 0 50px;
+    padding: 16px 50px 0 50px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -196,13 +206,24 @@ body {
 }
 
 .btn-container {
-    
+    display: grid;
+    grid-template-columns: 1fr auto auto auto 1fr;
+    align-items: center;
+    justify-items: end;
+    gap: 20px;
 }
 
-button {
-    padding: 10px 0;
+.btn-container button {
+    padding: 12px 0;
+    width: 100px;
     border: none;
     border-radius: 20px;
     background-color: rgb(25,146,212);
     color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+#new-btn {
+    grid-column: 2;
 }
