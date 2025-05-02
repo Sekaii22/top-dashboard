@@ -16,7 +16,7 @@
     font-display: swap;
 }
 
-/* Reset */
+/* ------ Reset ------ */
 * {
     padding: 0px;
     margin: 0px;
@@ -35,7 +35,7 @@ a:visited {
     color: unset;
 }
 
-/* General */
+/* ------ General ------ */
 
 * {
     font-family: 'Roboto', Helvetica, sans-serif;
@@ -82,7 +82,7 @@ body {
     grid-area: content;
 }
 
-/* Sidebar */
+/* ------ Sidebar ------ */
 
 .sidebar {
     display: grid;
@@ -133,8 +133,9 @@ body {
     vertical-align: sub;
 }
 
-/* Header */
+/* ------ Header ------ */
 
+/* search bar */
 .header {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -159,12 +160,7 @@ body {
     padding: 0 12px;
 }
 
-.profile-img {
-    width: 50px;
-    height: auto;
-    border-radius: 50%;
-}
-
+/* user profile */
 .user-info-container {
     display: grid;
     grid-template-columns: 7fr auto auto auto 1fr;
@@ -172,10 +168,17 @@ body {
     gap: 25px;
 }
 
+.profile-img {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+}
+
 .user-info-container .icon {
     grid-column: 2;
 }
 
+/* user greeting */
 .user-greeting-container {
     display: grid;
     grid-template-columns: 70px 1fr;
@@ -203,6 +206,7 @@ body {
     white-space: wrap;
 }
 
+/* content creation buttons */
 .btn-container {
     display: grid;
     grid-template-columns: 1fr auto auto auto 1fr;
@@ -234,15 +238,17 @@ body {
     grid-column: 2;
 }
 
-/* Content */
+/* ------ Content ------ */
 
 .content {
     display: grid;
-    grid-template-columns: minmax(300px, 1fr) 250px;
+    grid-template-columns: minmax(300px, 1fr) 300px;
+    grid-template-rows: auto 1fr;
     gap: 20px;
     padding: 30px 30px;
 }
 
+/* "your projects" */
 .project-container {
     grid-row: 1 / 3;
 }
@@ -251,13 +257,12 @@ body {
 .announce-container > p,
 .trending-container > p {
     font-size: 1.2rem;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
 }
-
 
 .project-container .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-auto-rows: 220px;
     gap: 30px;
 }
@@ -272,14 +277,14 @@ body {
 }
 
 .proj-title {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: bold;
 }
 
 .proj-desc {
     overflow-y: auto;
     font-size: 0.9rem;
-    color: rgb(103, 103, 103)
+    color: rgb(103, 103, 103);
 }
 
 .proj-card-btns {
@@ -302,3 +307,37 @@ body {
     background-color: transparent;
     border: none;
 }
+
+/* announcements */
+
+.announce-container .card-container,
+.trending-container .card-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 22px 26px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.announce-card:not(:last-child) {
+    border-bottom: 1px solid rgba(103, 103, 103, 0.5);
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.announce-title {
+    font-size: 0.9rem;
+}
+
+.announce-desc {
+    font-size: 0.8rem;
+    color: rgb(103, 103, 103);
+    
+    /* Adds ellipses when more than 3 lines */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+}
+
+/* trending */
