@@ -60,7 +60,7 @@ button:active {
 body {
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 1fr 6fr;
     grid-template-rows: 180px 1fr;
     grid-template-areas: 
         "sidebar header" 
@@ -107,7 +107,6 @@ body {
 .text-logo {
     font-size: 1.7rem;
     font-weight: bold;
-    justify-self: start;
     align-self: center;
 }
 
@@ -140,7 +139,7 @@ body {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 2fr;
-    padding: 16px 50px 0 50px;
+    padding: 14px 50px 10px 50px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -203,7 +202,7 @@ body {
     font-weight: bold;
     font-size: 1.6rem;
     align-self: start;
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 
 /* content creation buttons */
@@ -245,7 +244,7 @@ body {
     grid-template-columns: minmax(300px, 1fr) 300px;
     grid-template-rows: auto 1fr;
     gap: 40px 20px;
-    padding: 30px 30px;
+    padding: 30px;
 }
 
 /* "your projects" */
@@ -262,7 +261,7 @@ body {
 
 .project-container .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     grid-auto-rows: 220px;
     gap: 30px;
 }
@@ -270,8 +269,10 @@ body {
 .project-card {
     background-color: white;
     border-radius: 10px;
+    border-left: 10px solid rgb(240,180,41);
     padding: 22px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    
     display: grid;
     grid-template-rows: 25px 1fr auto;
 }
